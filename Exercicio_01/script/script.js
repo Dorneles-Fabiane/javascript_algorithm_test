@@ -1,10 +1,12 @@
-//Falta implementar as verificações!
-
-
-function removeRepeated (sequenciaLetras, limite) {
+const removeRepeated = (sequenciaLetras, limite) => {
   var sequenciaTratada = "" ;
   var limit = 0;
   var char1, char2;
+  
+  if (sequenciaLetras == "" || limite == "" || limite > 1) {
+    window.alert("[ERRO] Informe valores válidos!")
+    return;
+  }
 
   for (var cont = 0; cont < sequenciaLetras.length; cont++) {
     char1 = sequenciaLetras.charAt(cont);
