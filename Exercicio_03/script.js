@@ -14,21 +14,21 @@ const lettersSum = (string1, string2) => {
 
     for (var posS1 = 0; posS1 < string1.length; posS1++) {
         char = string1.charAt(posS1);
-        valor = Number(alfanum.char);
-        if (char == alfanum[1][0]) {
-            valor = alfanum[2]
+
+        for (valor in alfanum) {
+            if (valor == char) {
+                valor = alfanum[valor];
+            }
+            if (maior < valor){
+                maior = valor;
+            }        
         }
-        if (maior < valor){
-            maior = valor;
-            console.log(valor)
-        }        
+        
     }
 
     for (var posS2 = 0; posS2 < string2.length; posS2++ ){
 
     }
     return maior;
-    //return null;
 }
-//console.log(alfanum);
 console.log(lettersSum(string1, string2))
