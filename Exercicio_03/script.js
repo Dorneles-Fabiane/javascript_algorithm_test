@@ -1,5 +1,5 @@
-var string1 = "fab3iane";
-var string2 = "diuliam";
+var string1 = "fabiane";
+var string2 = "diulia3m";
 
 const lettersSum = (string1, string2) => {
     //Your logic goes here
@@ -40,6 +40,12 @@ const lettersSum = (string1, string2) => {
     for (var posS2 = 0; posS2 < string2.length; posS2++) {
         char = string2.charAt(posS2);
 
+        controle = verifica(char);
+
+        if (controle == false) {
+            return;
+        }
+        
         for (valor2 in alfanum) {
             if (valor2 == char) {
                 valor2 = alfanum[valor2];
