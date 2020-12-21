@@ -1,5 +1,5 @@
-var string1 = "dcb";
-var string2 = "gdab";
+var string1 = "fab3iane";
+var string2 = "diuliam";
 
 const lettersSum = (string1, string2) => {
     //Your logic goes here
@@ -8,11 +8,22 @@ const lettersSum = (string1, string2) => {
     var maior1 = 0; menor1 = 26;
     var maior2 = 0; menor2 = 26;
     var resp = 0;
-    var char = "";
+    var char = "", controle = true;
     var valor = 0, valor2 = 0;
+    
+    if (string1 == "" || string2 == "") {
+        console.log("[ERRO] Informe valores válidos!");
+        return;
+    }
 
     for (var posS1 = 0; posS1 < string1.length; posS1++) {
         char = string1.charAt(posS1);
+
+        controle = verifica(char);
+
+        if (controle == false) {
+            return;
+        }
 
         for (valor in alfanum) {
             if (valor == char) {
@@ -44,4 +55,11 @@ const lettersSum = (string1, string2) => {
     resp = (maior1 * menor2) + (maior2 *  menor1);
     return resp;
 }
-console.log(lettersSum(string1, string2))
+
+function verifica(char) {
+    if (!isNaN(char)) {
+        console.log("[ERRO] Informe apenas letras (A a Z)");
+        return false;
+    }
+}
+console.log(lettersSum(string1.toLowerCase(), string2.toLowerCase()));
