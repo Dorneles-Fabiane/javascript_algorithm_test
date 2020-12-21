@@ -1,5 +1,10 @@
-function replaceChar (sequencia, limit) {
+const replaceChar = (sequencia, limit) => {
     var char, limite, tamanho, lastChar, cont = 0, resp = "";
+
+    if (sequencia == "" || limit == "" || limit < 1) {
+        window.alert("[ERRO] Informe valores válidos!")
+        return;
+    }
 
     for (var voltas = 0; voltas < sequencia.length; voltas++) {
         char = sequencia.charAt(voltas);
