@@ -13,15 +13,17 @@ const lettersSum = (string1, string2) => {
     var valor = 0;
 
     for (var posS1 = 0; posS1 < string1.length; posS1++) {
-        char = string1.charAt(posS1);
 
         for (valor in alfanum) {
+            char = string1.charAt(posS1);
             if (valor == char) {
                 valor = alfanum[valor];
             }
             if (maior < valor){
                 maior = valor;
-            }        
+            } if (menor > valor) {
+                menor = valor;
+            }      
         }
         
     }
@@ -29,6 +31,6 @@ const lettersSum = (string1, string2) => {
     for (var posS2 = 0; posS2 < string2.length; posS2++ ){
 
     }
-    return maior;
+    return menor;
 }
 console.log(lettersSum(string1, string2))
