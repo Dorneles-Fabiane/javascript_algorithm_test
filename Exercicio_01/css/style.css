@@ -1,0 +1,12 @@
+header {
+    text-align: center;
+}
+
+
+footer {
+    margin: 0;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    height: 2em;
+}
